@@ -1,4 +1,4 @@
-# PHP_Project_1
+# PHP Project 1
 Project Name : Contractor and Worker Management System<br>
 Technologies : HTML,CSS,JavaScript, PHP, MySQL<br>
 Description : In this project, there are 3 users (contractor, worker and customer).<br>
