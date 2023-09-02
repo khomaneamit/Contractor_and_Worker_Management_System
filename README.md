@@ -10,9 +10,9 @@ d) Generates reports of projects and workers.<br>
 Worker can do following tasks:<br>
 a) Register itself.<br>
 b) Apply for leave.<br>
-c) enerate his work reports.<br>
+c) Generate his work reports.<br>
 Customer can do following tasks:<br>
-    Upload projects.<br>
-    generate progress reports.<br>
+a) Upload projects.<br>
+b) Generate progress reports.<br>
 Additional features : Here multiple contractors bid for a project and customer allocate the project to contractor.
   
