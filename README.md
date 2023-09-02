@@ -8,9 +8,9 @@ b) Upload and manage projects.<br>
 c) Manage his workers.<br>
 d) Generates reports of projects and workers.<br>
 Worker can do following tasks:<br>
-    Register itself.<br>
-    Apply for leave.<br>
-    generate his work reports.<br>
+a) Register itself.<br>
+b) Apply for leave.<br>
+c) enerate his work reports.<br>
 Customer can do following tasks:<br>
     Upload projects.<br>
     generate progress reports.<br>
