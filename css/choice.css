@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Libre Baskerville', serif;
+}
+
+body{
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,32,0.7)),url('../images/image1.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.outer{
+    background-color:white;
+    width : 400px;
+    margin: auto;
+    margin-top: 170px;
+    border-radius: 10px;
+    padding-top: 10px;
+    border: black 2px solid;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 5px 5px black;
+}
+
+.choice_label{
+    text-align: center;
+    font-size: 30px;
+    margin: 10px;
+}
+
+.choice_label2{
+    margin-left: 20px;
+    margin-top: 15px;
+    font-size:20px;
+    color:grey;
+}
+
+.choice_select{
+    margin-top:12px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 5px;
+    padding-left: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.choice_submit{
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 5px;
+    background-color: rgb(0, 200, 0);
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 150px;
+}
+
+.choice_submit:hover{
+	transition:0.5s;
+    background-color:rgb(45, 136, 45);
+    cursor: pointer;
+}

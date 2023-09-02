@@ -1,0 +1,153 @@
+create table contractor
+(
+	c_id varchar(20) primary key,
+	name varchar(100),
+	address varchar(100),
+	email_address varchar(100),
+	contact_no varchar(10),
+	birth_date date,
+	contract_type varchar(20),
+	license_no varchar(20),
+	expiry_date date,
+	username varchar(100),
+	password varchar(50),
+	security_question varchar(200),
+	answer varchar(100)
+);
+
+create table worker
+(
+	w_id varchar(20) primary key,
+	name varchar(100),
+	address varchar(100),
+	email_address varchar(100),
+	contact_no varchar(10),
+	birth_date date,
+	skill varchar(100),
+	status varchar(100),
+	c_id varchar(20),
+	username varchar(100),
+	password varchar(50),
+	security_question varchar(200),
+	answer varchar(100)
+);
+
+create table customer
+(
+	cust_id varchar(20) primary key,
+	name varchar(100),
+	address varchar(100),
+	email_address varchar(100),
+	contact_no varchar(10),
+	birth_date date,
+	username varchar(100),
+	password varchar(50),
+	security_question varchar(200),
+	answer varchar(100)
+);
+
+create table project
+(
+	project_id varchar(20) primary key,
+	project_type varchar(100),
+	work_type varchar(100),
+	project_loc varchar(100),
+	exstart_date date,
+	excompleted_date date,
+	total_tasks int,
+	tasks varchar(1000),
+	description varchar(1000),
+	completed_tasks int,
+	status varchar(100),
+	start_date date,
+	completed_date date,
+	cust_id varchar(20),
+	c_id varchar(20)
+);
+
+create table project_worker
+(
+	alloc_id varchar(20) primary key,
+	work_id varchar(20),
+	w_id varchar(20),
+	c_id varchar(20),
+	alloc_date date
+);
+
+create table worker_leave
+(
+	leave_id varchar(20) primary key,
+	w_id varchar(20),
+	work_id varchar(20),
+	leave_date date,
+	reason varchar(1000),
+	status varchar(100)
+);
+
+create table project_bid
+(
+	bid_id varchar(20) primary key,
+	message varchar(1000),
+	bid_date date,
+	status varchar(100),
+	project_id varchar(20),
+	c_id varchar(20)
+);
+
+create table login
+(
+	login_id varchar(20) primary key,
+	username varchar(100) unique key,
+	password varchar(100),
+	Type varchar(20),
+	id varchar(20)
+);
+
+
+<?php
+    $a=$b=$c=$d=$e=$f=$g=$h=$i=$j=$k=$l=1;
+    if(isset($_POST['cname']))
+    {
+        $name=explode(" ",$_POST['cname']);
+        for($z=0;$z<count($name);$z++)
+            if(!preg_match("/^[a-zA-Z]*$/",$name[$z]))
+            {    
+                $a=2;
+                break;
+            }
+
+        if(!filter_var($_POST['cmail'],FILTER_VALIDATE_EMAIL))
+            $b=2;
+        if(strlen($_POST['ccontact'])!=10)
+            $c=2;
+        else if(!preg_match("/^[0-9]*$/",$_POST['ccontact']))
+            $c=3;
+        $date1=date_create(date("Y-m-d"));
+        $date2=date_create($_POST['cbdate']);
+        $date=date_diff($date1,$date2);
+        if($date->invert==0)
+            $d=2;
+        else
+        {
+            if($date->y < 18)
+                $d=3;
+        }
+        if(!preg_match("/^[a-zA-Z]*$/",$_POST['ctype']))
+            $e=2;
+        $date3=date_create($_POST['cexdate']);
+        $date=date_diff($date1,$date3);
+        if($date->invert==1)
+            $f=2;
+        if(!filter_var($_POST['cusername'],FILTER_VALIDATE_EMAIL))
+            $g=2;
+
+        $len=strlen($_POST['cpassword']);
+        if(!preg_match("/^[a-zA-Z0-9]*$/",$_POST['cpassword']))
+            $h=2;
+        if(strcmp($_POST['cconfirm'],$_POST['cpassword'])!=0)
+            $i=2;
+    }
+
+?>
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, Repellat ad voluptas tempore dolor enim odio!, Quaerat sed ab, nostrum recusandae natus, possimus quo itaque sunt alias, molestias voluptatum quidem ipsa,Lorem ipsum dolor sit amet consectetur

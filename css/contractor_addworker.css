@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Libre Baskerville', serif;
+}
+
+body{
+    background-image: url('../images/image4.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,32,0.7));
+    padding: 10px;
+    color: whitesmoke;
+}
+
+.user_name{
+    width: 16%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    margin-left: 15px;
+}
+
+.name{
+    font-size: 17px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 60%;
+    list-style: none;
+}
+
+.menu li{
+    font-size: 20px;
+    padding: 7px;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.selected{
+    background-color: rgb(0, 250, 180);
+    border-radius: 5px;
+}
+
+.menu li:hover{
+    background-color: rgb(0, 250, 180);
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.menu1{
+    display:none;
+    list-style: none;
+}
+
+.menu li:hover .menu1{
+    display:block;
+    position:absolute;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,32,0.7));
+    margin-top:7px;
+    margin-left:-10px;
+    transition: 1s;
+}
+
+.menu li:hover .menu1 li{
+    width:150px;
+    padding: 10px;
+    border-bottom: 1px #fff dotted;
+    list-style: none;
+}
+
+.menu li:hover .menu1 li:last-child{
+    border-bottom: none;
+}
+
+.menu li:hover .menu1 li a{
+    text-decoration: none;
+    background-color: none;
+    color: whitesmoke;
+}
+
+/* end of navigation bar */
+
+.label1{
+    font-family:'Times New Roman', Times, serif;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.container1{
+    background-color: white;
+    box-shadow: 5px 5px 5px 5px black;
+    border-radius: 5px;
+    padding:10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin:auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    width:60%;
+}
+
+.fieldset{
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.fieldset1{
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-top: 15px;
+}
+
+.legend{
+    margin-left: 18px;
+    font-size: 20px;
+}
+
+.submit_reset{
+    width: 97%;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.submit{
+    background-color:rgb(0,200,0);
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 5px;
+    width: 150px;
+}
+
+.submit:hover{
+	transition:0.5s;
+    background-color:rgb(45, 136, 45);
+    cursor: pointer;
+}
+
+
+.container2{
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+
+}
+
+.container3{
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.first_container,.second_container{
+    width: 40%;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.container_label{
+    font-size: 15px;
+    width : 140px;
+    color: rgb(133, 130, 130);
+}
+
+.user{
+    margin-top: 10px;
+    color: rgb(133, 130, 130);
+}
+
+.container_input{
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 20px;
+    border: 1px black solid;
+    border-radius: 5px;
+}
